@@ -1,0 +1,55 @@
+@media screen and (max-width:850px) {
+   /*#################### Header Style #####################*/
+   header{
+    height: max-content;
+    z-index: 1000;
+   }
+   header > div{
+    flex-direction: column;
+   }
+   .navigation{
+    display: none;
+   }
+   .logo{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+   }
+   .listbtn.active{
+    transform: rotate(45deg);
+   }
+   .listbtn{
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 0.4s;
+   }
+   .listbtn.active div:nth-child(2){
+    width: 0%;
+    transition: all 0.4s;
+   }
+   .listbtn.active div:first-child{
+    transform: rotate(90deg) translateX(10px);
+   }
+   .listbtn.active div:last-child{
+    transform: translateY(-8px);
+   }
+   .navigation.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--secondary-color);
+    width: 100%;
+    z-index: 1000;
+   }
+   
+   /*********************************************************/
+   .definition .text{
+    width: 90%;
+   }
+}

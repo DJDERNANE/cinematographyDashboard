@@ -1,0 +1,409 @@
+/*#################### Global Style ######################*/
+@font-face {
+    font-family: 'boldFont';
+    src: url('fonts/bold.ttf') format('ttf'),
+}
+@font-face {
+    font-family: 'regulerFont';
+    src: url('fonts/reguler.ttf') format('ttf'),
+}
+html{
+    font-size: 20px;
+}
+:root{
+    --primary-color: #925d17;
+    --secondary-color: #FF7F0B;
+    --alternative-color: #FFCE33;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'regulerFont', sans-serif;
+    direction: rtl;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+}
+.decoration{
+    width: 20%;
+    height: 5px;
+    border-radius: 5px;
+    margin: 15px 0px;
+    background: linear-gradient(to left, var(--secondary-color), var(--alternative-color));
+}
+.title{
+    text-align: center;
+    font-size:  2rem;
+    color: white;
+    font-family: 'boldFont', sans-serif;
+    margin: 20px;
+}
+.cover{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/**********************************************************/
+
+/*#################### Header Style #####################*/
+header .btn button{
+    font-size: 1rem;
+}
+header{
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 0px;
+}
+header > div{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    height: 90px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+.logo img{
+    height: 80px;
+}
+.navigation{
+    display: flex;
+    list-style-type: none;
+}
+.navigation li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    margin: 10px;
+    transition: all 0.4s;
+}
+.navigation li a:hover{
+    color: #2b1f11;
+}
+.listbtn{
+    display: none;
+
+}
+.listbtn div{
+    background-color: white;
+    height: 4px;
+    width: 40px;
+    border-radius: 3px;
+    transition: all 0.4s;
+}
+.listbtn div:not(:last-child){
+    margin-bottom: 5px;
+}
+/*********************************************************/
+
+/*###################### Vedio #########################*/
+.presentation_vedio{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+}
+.presentation_vedio  h1{
+    color: white !important;
+}
+.presentation_vedio video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+/********************************************************/
+/*######################## Definition #####################*/
+.definition{
+    padding: 60px;
+    background-color: var(--primary-color);
+}
+.definition .container{
+    display: flex;
+    justify-content: space-between;
+}
+.definition .text{
+    font-size: 1rem;
+    color: white;
+    margin: 30px 0px;
+    margin-left: 20px;
+    line-height: 35px;
+}
+.definition .imgs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imgs img{
+    width: 160px;
+    margin: 10px;
+    border-radius: 20px;
+    height: 230px;
+}
+.imgs img:nth-child(2){
+    width: 220px;
+    height: 320px;
+}
+/*********************************************************/
+/*####################### fILMS #########################*/
+.films{
+    background-image: url(../imgs/bg.jpg);
+    background-size: cover;
+    text-align: center;
+    padding: 100px 0px;
+    position: relative;
+}
+.films .cover{
+    background-color: rgba(0,0,0,0.8);
+    
+}
+.films .container{
+    z-index: 100;
+}
+.films .decoration{
+    margin: auto;
+    z-index: 100;
+}
+.filmsConatiner, .actorsConatiner{
+    padding: 60px 0px;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    justify-content: center;
+    gap: 60px;
+    z-index: 100;
+}
+.film, .actor{
+   height: 400px;
+   margin: 20px 0px;
+   position: relative;
+   overflow: hidden;
+}
+.film img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.film .info{
+    position: absolute;
+    bottom:  0;
+    right: 0;
+
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    border-radius: 20px;
+}
+.info h2{
+    color: white;
+    font-size: 2.2rem;
+    text-align: right;
+    padding: 3px 20px;
+    padding-top: 20px;
+}
+.info .decoration{
+    margin: 0px 20px;
+    margin-bottom: 20px;
+}
+.btn {
+    display: flex;
+    justify-content: center;
+}
+.btn button{
+    color: white;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    background: linear-gradient(to left, var(--secondary-color), var(--alternative-color));
+    cursor: pointer;
+    border-radius: 50px;
+    border: none;
+    font-family: 'boldFont', sans-serif;
+}
+
+
+
+/*********************************************************/
+/*######################### Actors #########################*/
+.actors{
+    background-image: url(../imgs/bg2.png);
+    padding: 100px 0px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.actors .decoration{
+    margin: auto;
+}
+.actor {
+    border: solid 2px var(--secondary-color);
+    border-radius: 20px;
+    background-color: rgba(245, 131, 31, 0.07);
+    cursor: pointer;
+    position: relative;
+}
+.actor img{
+    display: none;
+    transition: all 0.4s;
+}
+.actor .desc{
+    color: white;
+    position: absolute;
+    top: 20px;
+    padding: 30px;
+    transition: transform 0.5s
+}
+.actor .desc .decoration{
+    margin: 0;
+    width: 40%;
+}
+.actor .desc h1{
+    margin: 10px 0px;
+}
+.actor .desc p{
+    margin: 20px 0px;
+    transition: all 0.4s;
+}
+.actor.active{
+    border: none;
+    transition: all 0.4s;
+}
+.actor.active img{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s;
+}
+.actor.active .desc p{
+    display: none;
+}
+.actor.active .desc{
+    position: absolute;
+
+   transform:translateY(200px);
+}
+/************************************************************/
+/*######################### Footer ##########################*/
+footer {
+    background-color: #1E1E1E;
+}
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer img{
+    height: 300px;
+}
+
+footer div h2{
+    color: white;
+    border-bottom: solid white 2px;
+    width: max-content;
+
+}
+footer div nav{
+    list-style-type: none;
+    margin-top: 20px;
+    width: 300px;
+    margin-right: 20px;
+}
+footer div nav li{
+    margin: 10px 0px;
+}
+footer div nav a{
+    color: white;
+    text-decoration: none;
+
+}
+footer div nav a:hover{
+    margin-right: 20px;
+    transition: all 0.4s;
+
+}
+.social {
+    width: 280px;
+}
+.social i{
+    font-size: 1.5rem;
+    color: white;
+    margin: 10px;
+}
+select{
+    background-color: transparent;
+    font-size: 1rem;
+    color: white;
+    padding: 8px;
+    width: 220px;
+    border: 2px white solid;
+    border-radius: 11px;
+    margin: 20px 0px;
+}
+.news{
+    height: 100vh;
+    background-image: url(../imgs/bg3.png);
+    background-size: contain;
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.news .decoration{
+    margin: auto;
+
+}
+.swiper{
+    height: 80vh;
+    color: white;
+    margin: 40px 0px;
+    display: flex;
+    align-items: center;
+}
+.swiper-slide{
+    width: 400px;
+    position: relative;
+    height: 100%;
+}
+.swiper-slide > img{
+    width: 60%;
+    height: 67%;
+    margin: auto;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s;
+}
+.swiper-slide.swiper-slide-next > img{
+    width: 85%;
+    height: 85%;
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+    display: none;
+}
+.prev i,.next i{
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
+.swiper-rtl .swiper-button-next.next {
+    left: var(--swiper-navigation-sides-offset,32%);
+    right: auto;
+    top: 50%;
+}
+.swiper-rtl .swiper-button-prev.prev {
+    right: var(--swiper-navigation-sides-offset,32%);
+    left: auto;
+    top: 50%;
+}
+/****************************************************************/
